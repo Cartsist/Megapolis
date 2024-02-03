@@ -1,20 +1,13 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
-ffffuytfufrurtfuttgtigetgh8e5ogget5ohuiuhbnuib
-cttdcgrrfctrcrtcrcctrctrcrfftrggfgvgvnjFNEWN
-zsdzsdzsdzs
-c  cv cvc
+f = open('game').read()
+f=f.split('\n')
+a=[]
+for i in f:
+    a.append(i.split('$'))
+for i in a:
+    if '55' in i[2]:
+        print('У персонажа '+i[1]+'в игре '+i[0]+'нашлась ошибка с кодом ' +i[2]+'.' +' Дата фиксации: ',i[-1])
+        i[2]='Done'
+        i[-1] = '0000-00-00'
+    file = open('game_new.csv', "w")
+    for i in a:
+        file.write('\t'.join(i))+'\n'
